@@ -1,0 +1,3 @@
+C:/Users/Behlul/Desktop/otobusKart/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Behlul/Desktop/otobusKart/cmake-build-debug/CMakeFiles/otobusKart.dir
+C:/Users/Behlul/Desktop/otobusKart/cmake-build-debug/CMakeFiles/edit_cache.dir
