@@ -9,8 +9,11 @@
 
 class user : public person{
 public:
+    user();
+    user(string,string, unsigned int);
     card card1;
     card card2;
+    user operator+(const card &c2);
     void loadBalance(card,unsigned int);
     void readCard(card);
     void showCardStatus(card);

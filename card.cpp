@@ -6,6 +6,10 @@
 #include "card.h"
 using namespace std;
 
+card::card() {
+
+}
+
 void card::setCardType(int c) {
     switch (c){
         case 0:

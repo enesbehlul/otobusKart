@@ -3,13 +3,17 @@
 
 CMakeFiles/otobusKart.dir/admin.cpp.obj: ../admin.cpp
 CMakeFiles/otobusKart.dir/admin.cpp.obj: ../admin.h
+CMakeFiles/otobusKart.dir/admin.cpp.obj: ../card.h
+CMakeFiles/otobusKart.dir/admin.cpp.obj: ../person.h
 
 CMakeFiles/otobusKart.dir/card.cpp.obj: ../card.cpp
 CMakeFiles/otobusKart.dir/card.cpp.obj: ../card.h
 
+CMakeFiles/otobusKart.dir/main.cpp.obj: ../admin.h
 CMakeFiles/otobusKart.dir/main.cpp.obj: ../card.h
 CMakeFiles/otobusKart.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/otobusKart.dir/main.cpp.obj: ../person.h
+CMakeFiles/otobusKart.dir/main.cpp.obj: ../user.h
 
 CMakeFiles/otobusKart.dir/person.cpp.obj: ../card.h
 CMakeFiles/otobusKart.dir/person.cpp.obj: ../person.cpp

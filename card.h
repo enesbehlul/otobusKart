@@ -14,6 +14,9 @@ typedef enum cardType{
 }cardType;
 class card{
 public:
+
+    card();
+
     void setCardType(int);
     string getCardType();
     void setBalance(int);

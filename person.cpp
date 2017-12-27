@@ -4,6 +4,9 @@
 
 #include "person.h"
 
+person::person() {
+
+}
 void person::setId(unsigned int number) {
     id=number;
 }
@@ -11,13 +14,13 @@ int person::getId() {
     return id;
 }
 void person::setName(string n) {
-    name = n;
+    name.assign(n);
 }
 string person::getName() {
     return name;
 }
 void person::setSurname(string s) {
-    surname = s;
+    surname.assign(s);
 }
 string person::getSurname() {
     return surname;

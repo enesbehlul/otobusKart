@@ -13,6 +13,8 @@ using namespace std;
 typedef enum personType{User, Admin}personType;
 class person{
 public:
+    person();
+
     void setName(string);
     string getName();
 
@@ -24,6 +26,7 @@ public:
 
     void setPersonType(int);
     string getPersonType();
+
 private:
     string name;
     string surname;
