@@ -9,14 +9,6 @@ using namespace std;
 user::user(){
     setPersonType(0);
 }
-user::user(string n, string s, unsigned int i) {
-    setName(n);
-    setSurname(s);
-    setId(i);
-    setPersonType(0);
-    card1.setBalance(0);
-    card2.setBalance(0);
-}
 
 user operator+(const card &c3){
 

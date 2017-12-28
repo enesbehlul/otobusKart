@@ -5,6 +5,7 @@ CMakeFiles/otobusKart.dir/admin.cpp.obj: ../admin.cpp
 CMakeFiles/otobusKart.dir/admin.cpp.obj: ../admin.h
 CMakeFiles/otobusKart.dir/admin.cpp.obj: ../card.h
 CMakeFiles/otobusKart.dir/admin.cpp.obj: ../person.h
+CMakeFiles/otobusKart.dir/admin.cpp.obj: ../user.h
 
 CMakeFiles/otobusKart.dir/card.cpp.obj: ../card.cpp
 CMakeFiles/otobusKart.dir/card.cpp.obj: ../card.h

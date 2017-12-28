@@ -6,15 +6,16 @@
 #define OTOBUSKART_ADMIN_H
 
 #include "person.h"
+#include "user.h"
 
 class admin : public person{
 public:
     admin();
     void createUser(person * list[10]);
-    void deleteUser();
-    void showPersonStatus();
-    void showUserStatus();
-    void findUser();
+    void deleteUser(person * list[10]);
+    void showPersonStatus(person * list[10], unsigned int ID);
+    void showUserStatus(person * list[10], unsigned int ID);
+    user* findUser(person * list[10], unsigned int ID);
     void combineUserCards();
 private:
 };

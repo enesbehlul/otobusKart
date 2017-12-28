@@ -16,12 +16,14 @@ void createPersonList(person *list[10]){
 
     b->setPersonType(0);
     b->setId(4321);
-    b->setName("selin");
-    b->setSurname("selen");
+    b->setName("burcin");
+    b->setSurname("keskin");
     list[0] = a;
     list[1] = b;
     int i;
     for (i = 2; i < MAXPERSON; i++) {
+        person *p = new person();
+        list[i]=p;
         list[i]->setPersonType(0);
         list[i]->setId(0);
         list[i]->setName(" ");
@@ -38,10 +40,14 @@ void adminTransactions2(int i, person *list[10]){
             ((admin *)(list[i]))->createUser(list);
             break;
         case 2:
+            ((admin *)(list[i]))->deleteUser(list);
             break;
         case 3:
             break;
         case 4:
+            puts("Kullanici id giriniz.");
+            scanf("%d",&number);
+           ((admin *)(list[i]))->showPersonStatus(list,number);
             break;
         case 5:
             break;
