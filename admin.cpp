@@ -3,6 +3,8 @@
 //
 
 #include "admin.h"
+#include <iostream>
+#include <string>
 #include "user.h"
 using namespace std;
 #define MAXPERSON = 10
@@ -55,20 +57,34 @@ void admin::deleteUser(person * list[10]) {
     }
     puts("Boyle bir kullanici bulunamadi.");
 }
-void admin::showPersonStatus(person * list[10], unsigned int ID) {
-
+void admin::showPersonStatus(person * list[10]) {
+    user *a = findUser(list);
 }
-void admin::showUserStatus(person * list[10], unsigned int ID) {
-        user *a = findUser(list,ID);
+void admin::showUserStatus(person * list[10]) {
+    user *a = new user();
+    a = findUser(list);
+    cout<<"\n\tAd: " <<a->getName()<<"\n\tSoyad: " <<a->getSurname()<<"\nKart bilgileri\n\tKart1"<<a->card1->getBalance()<<"\n\tKart2"<<a->showCardStatus(a->card2);
 }
-user* admin::findUser(person * list[10],unsigned int ID) {
+user* admin::findUser(person * list[10]) {
     int i;
-    for(i = 0; i<10;i++){
+    unsigned int ID = scanId();
+    for(i = 0; i<10;++i){
         if(list[i]->getId()==ID){
+            puts("Kullanici bulundu");
             return ((user *)(list[i]));
         }
     }
+    puts("Kullanici bulunamadi");
+    return new user();
 }
-void admin::combineUserCards() {
-
+void admin::combineUserCards(person * list[10]) {
+    user *a = findUser(list);
+    user *b = *a+a;
+    cout<<b->showCardStatus(b->card1);
+}
+unsigned int admin::scanId(){
+    unsigned int id;
+    puts("Id giriniz.");
+    scanf("%u",&id);
+    return id;
 }

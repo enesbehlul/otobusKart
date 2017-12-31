@@ -5,6 +5,7 @@
 #ifndef OTOBUSKART_CARD_H
 #define OTOBUSKART_CARD_H
 
+#include <iostream>
 #include <string>
 
 using namespace std;
@@ -14,15 +15,13 @@ typedef enum cardType{
 }cardType;
 class card{
 public:
-
     card();
-
     void setCardType(int);
     string getCardType();
     void setBalance(int);
     int getBalance();
 private:
-    unsigned int balance;
+    int balance;
     cardType cardType1;
 };
 #endif //OTOBUSKART_CARD_H

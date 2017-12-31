@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "person.h"
 #include "user.h"
 #include "admin.h"
@@ -7,8 +8,8 @@
 using namespace std;
 
 void createPersonList(person *list[10]){
-    admin *a = new admin;
-    user *b = new user;
+    admin *a = new admin();
+    user *b = new user();
     a->setPersonType(1);
     a->setId(1234);
     a->setName("hakki");
@@ -18,6 +19,16 @@ void createPersonList(person *list[10]){
     b->setId(4321);
     b->setName("burcin");
     b->setSurname("keskin");
+    card *c1 = new card();
+    card *c2 = new card();
+    c1->setBalance(5000);
+    c2->setBalance(1000);
+    cout<<c1->getBalance()<<endl;
+    cout<<c2->getBalance()<<endl;
+    b->card1=c1;
+    cout<<b->showCardStatus(b->card1)<<endl;
+    b->card2=c2;
+    cout<<b->showCardStatus(b->card2);
     list[0] = a;
     list[1] = b;
     int i;
@@ -38,20 +49,23 @@ void adminTransactions2(int i, person *list[10]){
     switch (number) {
         case 1:
             ((admin *)(list[i]))->createUser(list);
+            ;
             break;
         case 2:
             ((admin *)(list[i]))->deleteUser(list);
             break;
         case 3:
+            ((admin *)(list[i]))->findUser(list);
             break;
         case 4:
-            puts("Kullanici id giriniz.");
-            scanf("%d",&number);
-           ((admin *)(list[i]))->showPersonStatus(list,number);
+           ((admin *)(list[i]))->showUserStatus(list);
             break;
         case 5:
+            ((admin *)(list[i]))->combineUserCards(list);
             break;
         case 6:
+            cout<<((admin *)(list[i]))->getSurname();
+            cout<<((user *)(list[1]))->getSurname();
             break;
         case 7:
             return;

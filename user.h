@@ -6,17 +6,18 @@
 #define OTOBUSKART_USER_H
 
 #include "person.h"
+#include <iostream>
+#include <string>
 
 class user : public person{
 public:
     user();
-    user(string,string, unsigned int);
-    card card1;
-    card card2;
-    user operator+(const card &c2);
-    void loadBalance(card,unsigned int);
-    void readCard(card);
-    void showCardStatus(card);
+    card *card1;
+    card *card2;
+    user* operator+(user*);
+    void loadBalance(card*,unsigned int);
+    void readCard(card*);
+    string showCardStatus(card*);
 private:
 };
 

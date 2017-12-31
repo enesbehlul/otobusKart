@@ -3,6 +3,8 @@
 //
 
 #include "person.h"
+#include <iostream>
+#include <string>
 
 person::person() {
 
