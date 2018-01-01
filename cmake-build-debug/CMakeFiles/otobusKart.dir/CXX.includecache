@@ -9,12 +9,6 @@
 C:/Users/Behlul/Desktop/otobusKart/admin.cpp
 admin.h
 C:/Users/Behlul/Desktop/otobusKart/admin.h
-iostream
--
-string
--
-user.h
-C:/Users/Behlul/Desktop/otobusKart/user.h
 
 C:/Users/Behlul/Desktop/otobusKart/admin.h
 iostream
@@ -29,8 +23,6 @@ C:/Users/Behlul/Desktop/otobusKart/user.h
 C:/Users/Behlul/Desktop/otobusKart/card.cpp
 iostream
 -
-string
--
 card.h
 C:/Users/Behlul/Desktop/otobusKart/card.h
 
@@ -43,8 +35,6 @@ string
 C:/Users/Behlul/Desktop/otobusKart/main.cpp
 iostream
 -
-string
--
 person.h
 C:/Users/Behlul/Desktop/otobusKart/person.h
 user.h
@@ -55,10 +45,6 @@ C:/Users/Behlul/Desktop/otobusKart/admin.h
 C:/Users/Behlul/Desktop/otobusKart/person.cpp
 person.h
 C:/Users/Behlul/Desktop/otobusKart/person.h
-iostream
--
-string
--
 
 C:/Users/Behlul/Desktop/otobusKart/person.h
 iostream
@@ -71,10 +57,6 @@ C:/Users/Behlul/Desktop/otobusKart/card.h
 C:/Users/Behlul/Desktop/otobusKart/user.cpp
 user.h
 C:/Users/Behlul/Desktop/otobusKart/user.h
-iostream
--
-string
--
 
 C:/Users/Behlul/Desktop/otobusKart/user.h
 person.h

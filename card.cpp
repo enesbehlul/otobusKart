@@ -3,11 +3,12 @@
 //
 
 #include <iostream>
-#include <string>
 #include "card.h"
 using namespace std;
 
-card::card() {}
+card::card() {
+    balance = 0;
+}
 
 void card::setCardType(int c) {
     switch (c){
@@ -37,8 +38,11 @@ string card::getCardType() {
     }
 }
 void card::setBalance(int payment) {
-    if (getBalance()!=0){
+    if (balance != 0 && payment != 0){
         balance += payment;
+    }
+    else if(payment == 0){
+        balance = 0;
     }
     else
         balance = payment;

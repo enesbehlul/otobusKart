@@ -8,17 +8,19 @@
 #include <string>
 #include "person.h"
 #include "user.h"
+#define MAXPERSON 10
 
 class admin : public person{
 public:
     admin();
-    void createUser(person * list[10]);
-    void deleteUser(person * list[10]);
-    void showPersonStatus(person * list[10]);
-    void showUserStatus(person * list[10]);
-    user* findUser(person * list[10]);
-    void combineUserCards(person * list[10]);
+    void createUser(person * list[MAXPERSON]);
+    void deleteUser(person * list[MAXPERSON]);
+    void showPersonStatus(person * list[MAXPERSON]);
+    void showUserStatus(person * list[MAXPERSON]);
+    user* findUser(person * list[MAXPERSON]);
+    void combineUserCards(person * list[MAXPERSON]);
     unsigned int scanId();
+    void renameUser(person *);
 private:
 };
 #endif //OTOBUSKART_ADMİN_H

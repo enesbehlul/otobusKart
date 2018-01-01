@@ -1,36 +1,32 @@
-//
 // Created by Behlul on 21.12.2017.
-//
-
 #include "admin.h"
-#include <iostream>
-#include <string>
-#include "user.h"
 using namespace std;
-#define MAXPERSON = 10
-admin::admin(){
 
-}
+admin::admin(){}
 void admin::createUser(person * list[10]) {
-    int i;
+    int i, cardType;
     unsigned int id;
     string ad, soyad;
     for (i = 0; i < 10; i++) {
         if(list[i]->getId()==0){
             user *u = new user();
+            card *c1 = new card();
+            card *c2 = new card();
             puts("Bilgileri giriniz...");
             printf("\nKart sahibi>\n\tAd: ");
-            scanf("%s",ad);
+            cin>>ad;
             printf("\n\tSoyad: ");
-            scanf("%s",soyad);
+            cin>>soyad;
             printf("\n\tId: ");
-            scanf("%u",&id);
+            cin>>id;
             u->setPersonType(0);
             u->setName(ad);
             u->setSurname(soyad);
             u->setId(id);
+            puts("Normal kullanici ise 0, ogrenci ise 1, emekli ise 2 giriniz.");
+            cin>>cardType;
+            u->setCards(c1,c2,cardType);
             list[i]=u;
-            puts("Olusturuldu");
             return;
         }
     }
@@ -58,12 +54,18 @@ void admin::deleteUser(person * list[10]) {
     puts("Boyle bir kullanici bulunamadi.");
 }
 void admin::showPersonStatus(person * list[10]) {
-    user *a = findUser(list);
+    person *p= new person();
+    p = findUser(list);
+    if(p != nullptr){
+    cout<<"\tAd: " <<p->getName()<<"\n\tSoyad: " <<p->getSurname()<<endl;
+    }
 }
 void admin::showUserStatus(person * list[10]) {
     user *a = new user();
     a = findUser(list);
-    cout<<"\n\tAd: " <<a->getName()<<"\n\tSoyad: " <<a->getSurname()<<"\nKart bilgileri\n\tKart1"<<a->card1->getBalance()<<"\n\tKart2"<<a->showCardStatus(a->card2);
+    if(a != nullptr){
+        cout<<"\tAd: " <<a->getName()<<"\n\tSoyad: " <<a->getSurname()<<"\nKart bilgileri\n\t1.Kart: "<<a->showCardStatus(a->getCard1())<<" tl\n\t2.Kart: "<<a->showCardStatus(a->getCard2())<<" tl\n";
+    }
 }
 user* admin::findUser(person * list[10]) {
     int i;
@@ -75,16 +77,36 @@ user* admin::findUser(person * list[10]) {
         }
     }
     puts("Kullanici bulunamadi");
-    return new user();
+    return nullptr;
 }
 void admin::combineUserCards(person * list[10]) {
     user *a = findUser(list);
-    user *b = *a+a;
-    cout<<b->showCardStatus(b->card1);
+    if(a != nullptr){
+        a = *a+a;
+        a->getCard2()->setBalance(0);
+        cout<<a->showCardStatus(a->getCard1())<<endl;
+        int i;
+        for (i = 0; i <10; ++i) {
+            if (list[i]->getId()==a->getId()){
+                list[i]=a;
+            }
+        }
+    }
 }
 unsigned int admin::scanId(){
     unsigned int id;
     puts("Id giriniz.");
-    scanf("%u",&id);
+    cin>>id;
     return id;
+}
+void admin::renameUser(person *person) {
+    if(person != nullptr){
+        puts("Yeni adı giriniz:");
+        string ad, soyad;
+        cin>>ad;
+        puts("Yeni soyadı giriniz:");
+        cin>>soyad;
+        person->setName(ad);
+        person->setSurname(soyad);
+    }
 }

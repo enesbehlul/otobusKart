@@ -1,10 +1,7 @@
-//
 // Created by Behlul on 21.12.2017.
-//
 
 #include "user.h"
-#include <iostream>
-#include <string>
+
 using namespace std;
 
 
@@ -17,7 +14,19 @@ user* user::operator+(user *a){
     return a;
 }
 
-void user::loadBalance(card *c, unsigned int payment){
+void user::setCards(card *c1, card *c2, int cardType){
+    card1 = c1;
+    card2 = c2;
+    card1->setCardType(cardType);
+    card2->setCardType(cardType);
+}
+card* user::getCard1() {
+    return card1;
+}
+card* user::getCard2(){
+    return card2;
+}
+void user::loadBalance(card *c, int payment){
     c->setBalance(payment);
 }
 void user::readCard(card *c){

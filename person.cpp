@@ -3,12 +3,8 @@
 //
 
 #include "person.h"
-#include <iostream>
-#include <string>
 
-person::person() {
-
-}
+person::person() {}
 void person::setId(unsigned int number) {
     id=number;
 }
