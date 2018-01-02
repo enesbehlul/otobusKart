@@ -20,8 +20,14 @@ void admin::createUser(person * list[10]) {
             getline(cin,ad);
             printf("\n\tSoyad: ");
             getline(cin,soyad);
-            printf("\n\tId: ");
-            cin>>id;
+            while(1){
+                printf("\n\tId: ");
+                cin>>id;
+                if(id != 0)
+                    break;
+                else
+                    cout<<"Kullanici id 0 olamaz";
+            }
             u->setPersonType(0);
             u->setName(ad);
             u->setSurname(soyad);
@@ -59,16 +65,25 @@ void admin::deleteUser(person * list[10]) {
 void admin::showPersonStatus(person * list[10]) {
     person *p= new person();
     p = findUser(list);
-    if(p != nullptr){
+    if(p != nullptr && p->getId()!= 0){
     cout<<"\tAd: " <<p->getName()<<"\n\tSoyad: " <<p->getSurname()<<endl;
     }
+    else
+        cout<<"\tAd: Tanimlanmamis\n\tSoyad: Tanimlanmamis\n\tKullanici turu: Tanimlanmamis"<<endl;
 }
 void admin::showUserStatus(person * list[10]) {
     user *a = new user();
+    person *p = new person();
     a = findUser(list);
-    if(a != nullptr){
+    p = a;
+    if(a != nullptr && a->getPersonType()=="User" && a->getId()!=0){
         cout<<"\tAd: " <<a->getName()<<"\n\tSoyad: " <<a->getSurname()<<"\n\tKullanici turu: "<<a->getCard1()->getCardType()<<"\nKart bilgileri\n\t1.Kart: "<<a->showCardStatus(a->getCard1())<<" tl\n\t2.Kart: "<<a->showCardStatus(a->getCard2())<<" tl\n";
     }
+    else if(p != nullptr && p->getPersonType()=="Admin"){
+        cout<<"\tAd: " <<a->getName()<<"\n\tSoyad: " <<a->getSurname()<<"\n\tKullanici turu: Yonetici"<<endl;
+    }
+    else
+        cout<<"\tAd: Tanimlanmamis\n\tSoyad: Tanimlanmamis\n\tKullanici turu: Tanimlanmamis"<<endl;
 }
 user* admin::findUser(person * list[10]) {
     int i;

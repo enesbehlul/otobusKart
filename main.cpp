@@ -42,37 +42,52 @@ void createPersonList(person *list[MAXPERSON]){
 }
 
 void userTransactions(int i, person *list[MAXPERSON]){
-    int number, cardNumber, payment;;
-
+    int number, cardNumber, payment;
     while(1){
         printf("1- Bakiye yukle\n2- Kart okut\n3- Kart durumunu goster\n4- Ana menu\n");
         cin>>number;
         switch (number) {
             case 1:
-                system("cls");
-                puts("Hangi kartiniza yukleme yapmak istiyorsunuz? 1/2");
-                cin>>cardNumber;
-                puts("Ne kadar yukleme yapmak istiyorsunuz.");
-                cin>>payment;
-                if(cardNumber==1){
-                    ((user *)(list[i]))->loadBalance(((user *)(list[i]))->getCard1(),payment);
+                while(1){
+                    system("cls");
+                    puts("Hangi kartiniza yukleme yapmak istiyorsunuz? 1/2");
+                    cin>>cardNumber;
+                    if(cardNumber==1){
+                        puts("Ne kadar yukleme yapmak istiyorsunuz.");
+                        cin>>payment;
+                        ((user *)(list[i]))->loadBalance(((user *)(list[i]))->getCard1(),payment);
+                        pauseAndClearScreen();
+                        break;
+                    }
+                    else if(cardNumber == 2){
+                        puts("Ne kadar yukleme yapmak istiyorsunuz.");
+                        cin>>payment;
+                        ((user *)(list[i]))->loadBalance(((user *)(list[i]))->getCard2(),payment);
+                        pauseAndClearScreen();
+                        break;
+                    }
+                    cout<<"Yanlis giris yaptiniz"<<endl;
+                    pauseAndClearScreen();
                 }
-                else if(cardNumber == 2){
-                    ((user *)(list[i]))->loadBalance(((user *)(list[i]))->getCard2(),payment);
-                }
-                pauseAndClearScreen();
                 break;
             case 2:
-                system("cls");
-                puts("Hangi kartinizi kullanmak istiyorsunuz? 1/2");
-                cin>>cardNumber;
-                if(cardNumber==1){
-                    ((user *)(list[i]))->readCard(((user *)(list[i]))->getCard1());
+                while(1){
+                    system("cls");
+                    puts("Hangi kartinizi kullanmak istiyorsunuz? 1/2");
+                    cin>>cardNumber;
+                    if(cardNumber==1){
+                        ((user *)(list[i]))->readCard(((user *)(list[i]))->getCard1());
+                        pauseAndClearScreen();
+                        break;
+                    }
+                    else if(cardNumber == 2){
+                        ((user *)(list[i]))->readCard(((user *)(list[i]))->getCard2());
+                        pauseAndClearScreen();
+                        break;
+                    }
+                    cout<<"Yanlis giris yaptiniz"<<endl;
+                    pauseAndClearScreen();
                 }
-                else if(cardNumber == 2){
-                    ((user *)(list[i]))->readCard(((user *)(list[i]))->getCard2());
-                }
-                pauseAndClearScreen();
                 break;
             case 3:
                 system("cls");
@@ -99,6 +114,7 @@ void adminTransactions(int i, person *list[MAXPERSON]){
             case 1:
                 system("cls");
                 ((admin *)(list[i]))->createUser(list);
+                pauseAndClearScreen();
                 break;
             case 2:
                 system("cls");
