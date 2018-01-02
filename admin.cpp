@@ -2,7 +2,9 @@
 #include "admin.h"
 using namespace std;
 
-admin::admin(){}
+admin::admin(){
+    setPersonType(1);
+}
 void admin::createUser(person * list[10]) {
     int i, cardType;
     unsigned int id;
@@ -14,9 +16,10 @@ void admin::createUser(person * list[10]) {
             card *c2 = new card();
             puts("Bilgileri giriniz...");
             printf("\nKart sahibi>\n\tAd: ");
-            cin>>ad;
+            cin.ignore();
+            getline(cin,ad);
             printf("\n\tSoyad: ");
-            cin>>soyad;
+            getline(cin,soyad);
             printf("\n\tId: ");
             cin>>id;
             u->setPersonType(0);
@@ -64,7 +67,7 @@ void admin::showUserStatus(person * list[10]) {
     user *a = new user();
     a = findUser(list);
     if(a != nullptr){
-        cout<<"\tAd: " <<a->getName()<<"\n\tSoyad: " <<a->getSurname()<<"\nKart bilgileri\n\t1.Kart: "<<a->showCardStatus(a->getCard1())<<" tl\n\t2.Kart: "<<a->showCardStatus(a->getCard2())<<" tl\n";
+        cout<<"\tAd: " <<a->getName()<<"\n\tSoyad: " <<a->getSurname()<<"\n\tKullanici turu: "<<a->getCard1()->getCardType()<<"\nKart bilgileri\n\t1.Kart: "<<a->showCardStatus(a->getCard1())<<" tl\n\t2.Kart: "<<a->showCardStatus(a->getCard2())<<" tl\n";
     }
 }
 user* admin::findUser(person * list[10]) {
@@ -101,11 +104,12 @@ unsigned int admin::scanId(){
 }
 void admin::renameUser(person *person) {
     if(person != nullptr){
-        puts("Yeni adı giriniz:");
+        puts("Yeni ad giriniz:");
         string ad, soyad;
-        cin>>ad;
-        puts("Yeni soyadı giriniz:");
-        cin>>soyad;
+        cin.ignore();
+        getline(cin,ad);
+        puts("Yeni soyad giriniz:");
+        getline(cin,soyad);
         person->setName(ad);
         person->setSurname(soyad);
     }

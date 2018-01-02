@@ -12,28 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ee067b2-6a6f-4052-916e-36bad64e2116" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/admin.cpp" afterPath="$PROJECT_DIR$/admin.cpp" />
       <change beforePath="$PROJECT_DIR$/admin.h" afterPath="$PROJECT_DIR$/admin.h" />
       <change beforePath="$PROJECT_DIR$/card.cpp" afterPath="$PROJECT_DIR$/card.cpp" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/CXX.includecache" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/admin.cpp.obj" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/build.make" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/card.cpp.obj" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/link.txt" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/main.cpp.obj" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/objects.a" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/objects.a" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/otobusKart.dir/user.cpp.obj" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/otobusKart.exe" afterPath="" />
       <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change beforePath="$PROJECT_DIR$/person.cpp" afterPath="$PROJECT_DIR$/person.cpp" />
       <change beforePath="$PROJECT_DIR$/user.cpp" afterPath="$PROJECT_DIR$/user.cpp" />
-      <change beforePath="$PROJECT_DIR$/user.h" afterPath="$PROJECT_DIR$/user.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,23 +34,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="admin.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin.h">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="2300">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding>
-                <element signature="e#97#116#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+              <folding>
+                <element signature="e#111#130#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="675">
+              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -83,8 +83,8 @@
       <file leaf-file-name="user.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -93,8 +93,8 @@
       <file leaf-file-name="card.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/card.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-725">
-              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="-748">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -106,18 +106,6 @@
             <state relative-caret-position="150">
               <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3575">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -139,13 +127,13 @@
         <option value="$PROJECT_DIR$/../2. Sınıf Güz 2017 - 2018/BP3/Ödevler/gidereGider/main.c" />
         <option value="$PROJECT_DIR$/person.h" />
         <option value="$PROJECT_DIR$/card.h" />
+        <option value="$PROJECT_DIR$/user.h" />
+        <option value="$PROJECT_DIR$/person.cpp" />
         <option value="$PROJECT_DIR$/card.cpp" />
+        <option value="$PROJECT_DIR$/admin.cpp" />
+        <option value="$PROJECT_DIR$/user.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/admin.h" />
-        <option value="$PROJECT_DIR$/user.h" />
-        <option value="$PROJECT_DIR$/user.cpp" />
-        <option value="$PROJECT_DIR$/person.cpp" />
-        <option value="$PROJECT_DIR$/admin.cpp" />
       </list>
     </option>
   </component>
@@ -156,7 +144,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="321" />
     <option name="y" value="23" />
     <option name="width" value="1400" />
@@ -282,14 +270,16 @@
       <workItem from="1514808454166" duration="47000" />
       <workItem from="1514808516752" duration="6564000" />
       <workItem from="1514818399953" duration="8461000" />
+      <workItem from="1514870141967" duration="4423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88510000" />
+    <option name="totallyTimeSpent" value="92933000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114583336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -325,8 +315,12 @@
           <line>5</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/user.cpp</url>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -656,7 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,6 +669,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="e#111#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -688,16 +699,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/card.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="-748">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -712,29 +723,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3575">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="2300">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-          <folding>
-            <element signature="e#97#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

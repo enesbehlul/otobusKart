@@ -1,6 +1,4 @@
-//
 // Created by Behlul on 22.12.2017.
-//
 
 #include <iostream>
 #include "card.h"

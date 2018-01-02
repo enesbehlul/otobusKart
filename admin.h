@@ -1,14 +1,11 @@
-//
 // Created by Behlul on 21.12.2017.
-//
-
 #ifndef OTOBUSKART_ADMIN_H
 #define OTOBUSKART_ADMIN_H
+#define MAXPERSON 10
 #include <iostream>
 #include <string>
 #include "person.h"
 #include "user.h"
-#define MAXPERSON 10
 
 class admin : public person{
 public:

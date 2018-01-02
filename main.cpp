@@ -9,24 +9,23 @@ void pauseAndClearScreen(){
     system("pause");
     system("cls");
 }
+//acilista 10 elemanli person listesi ilk degerler ataniyor
 void createPersonList(person *list[MAXPERSON]){
     admin *a = new admin();
     user *b = new user();
 
-    a->setPersonType(1);
     a->setId(1234);
     a->setName("hakki");
     a->setSurname("hakli");
 
-    b->setPersonType(0);
     b->setId(4321);
-    b->setName("burcin");
-    b->setSurname("keskin");
+    b->setName("selin");
+    b->setSurname("sakli");
 
     card* c1 = new card();
     card *c2 = new card();
-    c1->setBalance(750);
-    c2->setBalance(250);
+    c1->setBalance(10000);
+    c2->setBalance(200);
     b->setCards(c1,c2,1);
 
     list[0] = a;
@@ -50,6 +49,7 @@ void userTransactions(int i, person *list[MAXPERSON]){
         cin>>number;
         switch (number) {
             case 1:
+                system("cls");
                 puts("Hangi kartiniza yukleme yapmak istiyorsunuz? 1/2");
                 cin>>cardNumber;
                 puts("Ne kadar yukleme yapmak istiyorsunuz.");
@@ -63,6 +63,7 @@ void userTransactions(int i, person *list[MAXPERSON]){
                 pauseAndClearScreen();
                 break;
             case 2:
+                system("cls");
                 puts("Hangi kartinizi kullanmak istiyorsunuz? 1/2");
                 cin>>cardNumber;
                 if(cardNumber==1){
@@ -74,8 +75,9 @@ void userTransactions(int i, person *list[MAXPERSON]){
                 pauseAndClearScreen();
                 break;
             case 3:
-                cout<<((user *)(list[i]))->showCardStatus(((user *)(list[i]))->getCard1())<<endl;
-                cout<<((user *)(list[i]))->showCardStatus(((user *)(list[i]))->getCard2())<<endl;
+                system("cls");
+                cout<<"1. Kart "<<((user *)(list[i]))->showCardStatus(((user *)(list[i]))->getCard1())<<endl;
+                cout<<"2. Kart "<<((user *)(list[i]))->showCardStatus(((user *)(list[i]))->getCard2())<<endl;
                 pauseAndClearScreen();
                 break;
             case 4:
@@ -88,7 +90,6 @@ void userTransactions(int i, person *list[MAXPERSON]){
 }
 void adminTransactions(int i, person *list[MAXPERSON]){
     int number;
-
     while(1){
         system("cls");
         printf("1- Kullanici olustur\n2- Kullanici sil\n3- Kisi durumunu goster\n4- Kullanici bul"
@@ -134,27 +135,47 @@ void adminTransactions(int i, person *list[MAXPERSON]){
 }
 void isItAdmin(person *list[MAXPERSON]){
     int id,i;
-    puts("Yonetici id giriniz:");
-    cin>>id;
-    for (i = 0; i < MAXPERSON; ++i) {
-        if (list[i]->getId()==id && list[i]->getPersonType()=="Admin"){
-            adminTransactions(i,list);
-            break;
+    string anaMenu;
+    while (1){
+        puts("Yonetici id giriniz:");
+        cin>>id;
+        for (i = 0; i < MAXPERSON; ++i) {
+            if (list[i]->getId()==id && list[i]->getPersonType()=="Admin"){
+                adminTransactions(i,list);
+                return;
+            }
         }
+        puts("girilen kullanici yonetici degildir. Ana menuye donmek istiyor musunuz? y/n");
+        cin>>anaMenu;
+        if (anaMenu == "y"){
+            system("cls");
+            return;
+        }
+        system("cls");
     }
-    puts("Boyle bir yonetici yok");
 }
 void isItUser(person *list[MAXPERSON]){
     int id,i;
-    puts("Kullanici id giriniz:");
-    cin>>id;
-    for (i = 0; i < MAXPERSON; ++i) {
-        if (list[i]->getId()==id && list[i]->getPersonType()=="User"){
-            userTransactions(i,list);
-            break;
+    string anaMenu;
+    while (1){
+        puts("Kullanici id giriniz:");
+        cin>>id;
+        for (i = 0; i < MAXPERSON; ++i) {
+            if (list[i]->getId()==id && list[i]->getPersonType()=="User"){
+                system("cls");
+                userTransactions(i,list);
+                return;
+            }
         }
+        puts("girilen kullanici kullanici tipinde degildir. Ana menuye donmek istiyor musunuz? y/n");
+        cin>>anaMenu;
+        if (anaMenu == "y"){
+            system("cls");
+            return;
+        }
+        system("cls");
     }
-    puts("Boyle bir kullanici yok");
+
 }
 void menu(person *list[MAXPERSON]){
     while(1){
