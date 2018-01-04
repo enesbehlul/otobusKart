@@ -44,30 +44,38 @@ void createPersonList(person *list[MAXPERSON]){
 void userTransactions(int i, person *list[MAXPERSON]){
     int number, cardNumber, payment;
     while(1){
+        system("cls");
         printf("1- Bakiye yukle\n2- Kart okut\n3- Kart durumunu goster\n4- Ana menu\n");
         cin>>number;
         switch (number) {
             case 1:
                 while(1){
-                    system("cls");
-                    puts("Hangi kartiniza yukleme yapmak istiyorsunuz? 1/2");
-                    cin>>cardNumber;
-                    if(cardNumber==1){
-                        puts("Ne kadar yukleme yapmak istiyorsunuz.");
-                        cin>>payment;
-                        ((user *)(list[i]))->loadBalance(((user *)(list[i]))->getCard1(),payment);
+                    if(((user *)(list[i]))->getCard1()->getCardType() != "Retired"){
+                        system("cls");
+                        puts("Hangi kartiniza yukleme yapmak istiyorsunuz? 1/2");
+                        cin>>cardNumber;
+                        if(cardNumber==1){
+                            puts("Ne kadar yukleme yapmak istiyorsunuz.");
+                            cin>>payment;
+                            ((user *)(list[i]))->loadBalance(((user *)(list[i]))->getCard1(),payment);
+                            pauseAndClearScreen();
+                            break;
+                        }
+                        else if(cardNumber == 2){
+                            puts("Ne kadar yukleme yapmak istiyorsunuz.");
+                            cin>>payment;
+                            ((user *)(list[i]))->loadBalance(((user *)(list[i]))->getCard2(),payment);
+                            pauseAndClearScreen();
+                            break;
+                        }
+                        cout<<"Yanlis giris yaptiniz"<<endl;
                         pauseAndClearScreen();
+                    }
+                    else{
+                        cout<<"Emeklilerden odeme almiyoruz"<<endl;
+                        system("pause");
                         break;
                     }
-                    else if(cardNumber == 2){
-                        puts("Ne kadar yukleme yapmak istiyorsunuz.");
-                        cin>>payment;
-                        ((user *)(list[i]))->loadBalance(((user *)(list[i]))->getCard2(),payment);
-                        pauseAndClearScreen();
-                        break;
-                    }
-                    cout<<"Yanlis giris yaptiniz"<<endl;
-                    pauseAndClearScreen();
                 }
                 break;
             case 2:
@@ -100,6 +108,7 @@ void userTransactions(int i, person *list[MAXPERSON]){
                 return;
             default:
                 puts("yanlis giris yaptiniz");
+                system("pause");
         }
     }
 }
@@ -146,6 +155,8 @@ void adminTransactions(int i, person *list[MAXPERSON]){
                 return;
             default:
                 puts("yanlis giris yaptiniz");
+                system("pause");
+
         }
     }
 }
@@ -177,7 +188,7 @@ void isItUser(person *list[MAXPERSON]){
         puts("Kullanici id giriniz:");
         cin>>id;
         for (i = 0; i < MAXPERSON; ++i) {
-            if (list[i]->getId()==id && list[i]->getPersonType()=="User"){
+            if (list[i]->getId()==id && list[i]->getPersonType()=="User" && id != 0){
                 system("cls");
                 userTransactions(i,list);
                 return;

@@ -32,10 +32,18 @@ void admin::createUser(person * list[10]) {
             u->setName(ad);
             u->setSurname(soyad);
             u->setId(id);
-            puts("Normal kullanici ise 0, ogrenci ise 1, emekli ise 2 giriniz.");
-            cin>>cardType;
+            while (1){
+                cout<<"Normal kullanici ise 0, ogrenci ise 1, emekli ise 2 giriniz."<<endl;
+                cin>>cardType;
+                if(cardType == 0 || cardType == 1 || cardType ==2){
+                    break;
+                }
+                else
+                    cout<<"Yanlis giris yaptiniz"<<endl;
+            }
             u->setCards(c1,c2,cardType);
             list[i]=u;
+            cout<<"Kullanici olusturuldu."<<endl;
             return;
         }
     }
@@ -101,7 +109,6 @@ void admin::combineUserCards(person * list[10]) {
     user *a = findUser(list);
     if(a != nullptr){
         a = *a+a;
-        a->getCard2()->setBalance(0);
         cout<<a->showCardStatus(a->getCard1())<<endl;
         int i;
         for (i = 0; i <10; ++i) {
